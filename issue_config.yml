@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Discord Community
+    url: https://discord.gg/vanguard
+    about: Get help and chat with other Vanguard users
+  - name: Documentation
+    url: https://hadionlineclas.github.io/vanguard/docs.html
+    about: Check the docs — your question might already be answered

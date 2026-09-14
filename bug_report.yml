@@ -1,0 +1,101 @@
+name: Bug Report
+description: Report a bug or unexpected behavior in Vanguard
+labels: ["bug", "triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to report a bug! Please fill out the sections below so we can reproduce and fix it.
+
+  - type: input
+    id: version
+    attributes:
+      label: Vanguard Version
+      description: Run `vanguard --version` and paste the output.
+      placeholder: "2.4.0"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: os
+    attributes:
+      label: Operating System
+      options:
+        - macOS
+        - Linux
+        - Windows
+    validations:
+      required: true
+
+  - type: dropdown
+    id: provider
+    attributes:
+      label: AI Provider
+      description: Which provider were you using when the bug occurred?
+      options:
+        - Google AI Studio (Gemini 3.8 Flash)
+        - Google AI Studio (Gemini 2.5 Flash)
+        - Groq (Llama 5 Scout)
+        - Groq (Llama 4 Maverick)
+        - Groq (DeepSeek R2 Distill)
+        - xAI (Grok 4.6)
+        - Mistral (Large 3)
+        - OpenAI (GPT-6 Astra)
+        - Anthropic (Claude Fable 5.1)
+        - Custom Endpoint
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Bug Description
+      description: A clear description of what happened.
+      placeholder: Describe the bug...
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to Reproduce
+      description: Minimal steps to reproduce the behavior.
+      placeholder: |
+        1. Run `vanguard` in a project directory
+        2. Ask it to...
+        3. See error...
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected Behavior
+      description: What did you expect to happen?
+    validations:
+      required: true
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: Logs / Error Output
+      description: Paste any relevant terminal output or error messages.
+      render: shell
+
+  - type: textarea
+    id: config
+    attributes:
+      label: Config (optional)
+      description: Paste your `vanguard.config.json` (remove API keys first!).
+      render: json
+
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Checklist
+      options:
+        - label: I've searched existing issues and this hasn't been reported
+          required: true
+        - label: I'm using the latest version of Vanguard
+          required: false

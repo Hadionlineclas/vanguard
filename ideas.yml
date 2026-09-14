@@ -1,0 +1,15 @@
+title: "[Idea]: "
+labels:
+  - idea
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Share your ideas for Vanguard! This is the place for open-ended brainstorming.
+  - type: textarea
+    id: idea
+    attributes:
+      label: Your Idea
+      description: Describe your idea in as much detail as you'd like.
+    validations:
+      required: true
